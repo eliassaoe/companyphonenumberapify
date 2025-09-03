@@ -357,9 +357,8 @@ Actor.main(async () => {
                 statusText: error.response?.statusText,
                 data: error.response?.data
             },
-            type: type,
             timestamp: new Date().toISOString(),
-            inputData: { companyName, country }
+            inputData: { companyName }
         }]);
         
         // Don't throw - let actor complete with error data
