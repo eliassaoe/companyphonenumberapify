@@ -1,0 +1,43 @@
+{
+    "actorSpecification": 1,
+    "name": "company-phone-finder",
+    "version": "1.0.0",
+    "buildTag": "latest",
+    "environmentVariables": {},
+    "dockerfile": "./Dockerfile",
+    "readme": "./README.md",
+    "input": "./INPUT_SCHEMA.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Company Phone Numbers",
+            "views": {
+                "overview": {
+                    "title": "Overview",
+                    "transformation": {
+                        "fields": [
+                            "companyName",
+                            "mainPhone",
+                            "phoneNumbers",
+                            "dataQuality"
+                        ]
+                    }
+                },
+                "detailed": {
+                    "title": "Detailed View",
+                    "transformation": {
+                        "fields": [
+                            "companyName",
+                            "mainPhone",
+                            "phoneNumbers",
+                            "companyInfo",
+                            "dataQuality",
+                            "searchCriteria",
+                            "processedAt"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
