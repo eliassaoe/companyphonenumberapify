@@ -1,0 +1,96 @@
+{
+    "title": "Company Phone Finder",
+    "description": "Find official company phone numbers from company names. Support for individual searches and bulk processing up to 5,000 companies. GET Unlimited leads here : https://unlimited-leads.online/",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "type": {
+            "title": "🔍 Search Type",
+            "type": "string",
+            "description": "Choose between individual company search or bulk processing",
+            "enum": ["individual", "bulk"],
+            "default": "individual",
+            "editor": "select"
+        },
+        "companyName": {
+            "title": "🏢 Company Name",
+            "type": "string",
+            "description": "Name of the company to search for (required for individual search)",
+            "example": "Apple Inc",
+            "editor": "textfield",
+            "sectionCaption": "Individual Search"
+        },
+        "country": {
+            "title": "📍 Country",
+            "type": "string",
+            "description": "Country to narrow search results (optional)",
+            "enum": [
+                "",
+                "United States",
+                "Canada",
+                "United Kingdom",
+                "Germany",
+                "France",
+                "Australia",
+                "Netherlands",
+                "Italy",
+                "Spain",
+                "India",
+                "Japan",
+                "Brazil",
+                "Mexico",
+                "South Africa",
+                "Singapore"
+            ],
+            "enumTitles": [
+                "All Countries",
+                "United States",
+                "Canada",
+                "United Kingdom",
+                "Germany",
+                "France",
+                "Australia",
+                "Netherlands",
+                "Italy",
+                "Spain",
+                "India",
+                "Japan",
+                "Brazil",
+                "Mexico",
+                "South Africa",
+                "Singapore"
+            ],
+            "default": "",
+            "editor": "select"
+        },
+        "phoneTypes": {
+            "title": "📞 Phone Types",
+            "type": "array",
+            "description": "Types of phone numbers to search for",
+            "items": {
+                "type": "string",
+                "enum": ["main", "support", "sales", "hr", "mobile", "fax"]
+            },
+            "default": ["main", "support", "sales"],
+            "editor": "multiselect"
+        },
+        "maxResults": {
+            "title": "📊 Max Results",
+            "type": "integer",
+            "description": "Maximum number of phone numbers to return per company (1-20)",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 5,
+            "editor": "number"
+        },
+        "companyNames": {
+            "title": "📄 Company Names (JSON Format)",
+            "type": "string",
+            "description": "JSON array of company names for bulk processing. Format: [\"Apple Inc\",\"Google\",\"Microsoft\"]",
+            "editor": "textarea",
+            "prefill": "[\"Apple Inc\",\"Google\",\"Microsoft\",\"Amazon\",\"Tesla\"]",
+            "sectionCaption": "Bulk Processing Options"
+        }
+    },
+    "required": []
+}
