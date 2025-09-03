@@ -1,0 +1,24 @@
+{
+    "name": "company-phone-finder",
+    "version": "1.0.0",
+    "description": "Find official company phone numbers from company names",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "apify": "^3.1.0",
+        "axios": "^1.6.0"
+    },
+    "keywords": [
+        "company-phone",
+        "phone-finder",
+        "contact-finder",
+        "company-research",
+        "business-intelligence",
+        "lead-generation",
+        "company-enrichment"
+    ],
+    "author": "Eliasse",
+    "license": "MIT"
+}
