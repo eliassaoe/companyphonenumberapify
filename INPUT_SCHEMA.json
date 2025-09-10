@@ -11,6 +11,5 @@
             "example": "Apple Inc",
             "editor": "textfield"
         }
-    },
-    "required": ["companyName"]
+    }
 }
